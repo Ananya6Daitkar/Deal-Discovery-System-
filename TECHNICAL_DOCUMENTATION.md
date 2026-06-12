@@ -1011,14 +1011,14 @@ class PlanningAgent:
 
 This is a **production-ready multi-agent system** that:
 
-✅ Uses local AI (Ollama + Gemma 2B)  
-✅ Implements multi-agent architecture  
-✅ Provides web interface (Gradio)  
-✅ Persists data (JSON)  
-✅ Handles errors gracefully  
-✅ Runs on modest hardware  
-✅ Requires no API keys  
-✅ Is fully open-source  
+- Uses local AI (Ollama + Gemma 2B)  
+- Implements multi-agent architecture  
+- Provides web interface (Gradio)  
+- Persists data (JSON)  
+- Handles errors gracefully  
+- Runs on modest hardware  
+- Requires no API keys  
+- Is fully open-source  
 
 **Total System Size:** ~550 lines of Python code
 

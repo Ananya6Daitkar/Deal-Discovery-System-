@@ -147,13 +147,6 @@ Switch models in `agents/specialist_agent.py`:
 MODEL = "gemma:2b"  # Any Ollama-compatible model
 ```
 
-## Performance Metrics
-
-- **Processing**: 10-15 seconds per discovery run
-- **Memory**: ~2GB (includes model)
-- **Code Complexity**: Reduced 40% through refactoring
-- **Agents**: 5 specialized components
-
 ---
 
 **Built with**: Multi-Agent AI • Gemma 2B • Modal.com • Ollama • Python • Gradio
