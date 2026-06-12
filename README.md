@@ -102,30 +102,12 @@ with torch.no_grad():
 
 ## Technical Skills Demonstrated
 
-**AI/ML Engineering:**
-- Multi-agent systems architecture
-- LLM fine-tuning with PEFT/LoRA
-- 4-bit quantization for efficiency
-- Prompt engineering and inference optimization
-- Ensemble learning techniques
-
-**Software Engineering:**
-- Design patterns (Agent, Orchestrator, Repository)
-- Type-safe Python with Pydantic
-- Modular, maintainable architecture
-- Error handling and logging
-
-**Infrastructure:**
-- Serverless GPU deployment (Modal.com)
-- Local LLM deployment (Ollama)
-- Infrastructure as code
-- Web scraping and data pipelines
-
-**Full Stack:**
-- Gradio web interface
-- REST API design
-- JSON persistence
-- Shell scripting
+- Multi-agent systems architecture with orchestration patterns
+- LLM fine-tuning (PEFT/LoRA) and 4-bit quantization
+- Serverless GPU deployment (Modal.com) + local inference (Ollama)
+- Type-safe Python with Pydantic validation
+- Web interface development with Gradio
+- Infrastructure as code and shell scripting
 
 ## Key Features
 
