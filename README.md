@@ -10,7 +10,6 @@ This system implements a multi-agent architecture where specialized AI agents co
 - Calculate potential discounts
 - Alert users about opportunities
 
-**Key Feature:** Runs entirely locally using Ollama - no cloud APIs or subscription costs.
 
 ## Quick Start
 
@@ -332,7 +331,6 @@ Based on multi-agent system design patterns and modern LLM application architect
 
 ### Documentation
 
-- **Quick Start**: See `HOW_TO_RUN.md`
 - **Technical Details**: See `TECHNICAL_DOCUMENTATION.md`
 - **Code Examples**: See `example.py`
 
