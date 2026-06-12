@@ -4,13 +4,14 @@ from agents.deals import Deal, Opportunity
 from agents.scanner_agent import ScannerAgent
 from agents.ensemble_agent import EnsembleAgent
 from agents.messaging_agent import MessagingAgent
+import config
 
 
 class PlanningAgent(Agent):
     """Orchestrates workflow across scanner, pricing, and messaging agents"""
     
     name = "Planning Agent"
-    DEAL_THRESHOLD = 0
+    DEAL_THRESHOLD = config.DEAL_THRESHOLD
 
     def __init__(self):
         self.scanner = ScannerAgent()

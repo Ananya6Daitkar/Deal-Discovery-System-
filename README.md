@@ -119,15 +119,42 @@ with torch.no_grad():
 
 ## Configuration
 
-Adjust thresholds in `agents/planning_agent.py`:
+**All features can be toggled in `config.py`:**
+
 ```python
+# Enable Modal.com fine-tuned model fallback
+USE_MODAL_FALLBACK = False  # Set True for better accuracy
+
+# Enable RAG with vector store
+USE_RAG = False  # Set True for context-aware pricing
+
+# Adjust deal threshold
 DEAL_THRESHOLD = 0  # Minimum discount percentage
+
+# Change Ollama model
+OLLAMA_MODEL = "gemma:2b"
 ```
 
-Switch models in `agents/specialist_agent.py`:
-```python
-MODEL = "gemma:2b"  # Any Ollama-compatible model
-```
+## Problem Solutions
+
+### 1. Price Estimation Accuracy
+**Solution**: Hybrid pricing with automatic fallback
+- Primary: Local Ollama (Gemma 2B) for privacy
+- Fallback: Modal.com fine-tuned model for accuracy
+- Enable in `config.py`: `USE_MODAL_FALLBACK = True`
+
+### 2. RSS Feed Reliability
+**Solution**: Multi-source scraping with demo data fallback
+- 5 RSS feeds (DealNews, Slickdeals, TechBargains)
+- Automatic demo data when all feeds fail
+- Always returns results for testing
+
+### 3. Python 3.14 Compatibility
+**Solution**: FAISS-based vector store (replaces ChromaDB)
+- Custom vector store using numpy + Ollama embeddings
+- RAG functionality restored
+- Enable in `config.py`: `USE_RAG = True`
+- Requires: `ollama pull nomic-embed-text`
 
 ---
 

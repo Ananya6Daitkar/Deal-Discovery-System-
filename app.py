@@ -3,6 +3,7 @@ Gradio Frontend for Multi-Agent Deal Discovery System
 """
 import gradio as gr
 from deal_agent_framework import DealAgentFramework
+import config
 
 # Global framework instance
 framework = None
@@ -14,7 +15,14 @@ def initialize_system():
     try:
         if framework is None:
             framework = DealAgentFramework()
-        return "System initialized - Using Ollama Gemma 2B"
+        
+        status = "System initialized - Using Ollama Gemma 2B"
+        if config.USE_MODAL_FALLBACK:
+            status += " + Modal.com fallback"
+        if config.USE_RAG:
+            status += " + RAG enabled"
+        
+        return status
     except Exception as e:
         return f"Error initializing: {str(e)}"
 
@@ -260,5 +268,5 @@ with gr.Blocks(title="Deal Discovery System", theme=gr.themes.Soft()) as demo:
 
 if __name__ == "__main__":
     print("Starting Deal Discovery System with Ollama...")
-    print("Open your browser at: http://localhost:7861")
-    demo.launch(server_name="127.0.0.1", server_port=7861, share=False)
+    print(f"Open your browser at: http://localhost:{config.GRADIO_PORT}")
+    demo.launch(server_name="127.0.0.1", server_port=config.GRADIO_PORT, share=False)
